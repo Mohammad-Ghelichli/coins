@@ -1,11 +1,19 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.container {
+  font-family: serif;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-top: 1px solid grey;
 }
-.red{
-    color: red;
+.red {
+  color: red;
 }
-.green{
-    color: green;
+.green {
+  color: green;
 }
+.container span{
+    margin-top: 30px;
+    display: block;
+align-items: center;}

@@ -3,6 +3,7 @@ import { useState } from 'react'
 import loading from "../images/loading.gif"
 import { useEffect } from 'react'
 import api from '../services/Api'
+import styles from "./Landing.module.css"
 import Coins from './Coins'
 function Landing() {
     const [search,setSearch]=useState("")
@@ -21,7 +22,7 @@ function Landing() {
   return (   
     <>
     {coins.length ?
-    <div>
+    <div className={styles.container}>
 
         <input type="text" value={search} placeholder='Search' onChange={searchHandler}  />
       
