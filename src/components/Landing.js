@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
+import loading from "../images/loading.gif"
 import { useEffect } from 'react'
 import api from '../services/Api'
+import Coins from './Coins'
 function Landing() {
     const [search,setSearch]=useState("")
     const [coins,setCoins] = useState ([])
@@ -26,11 +28,11 @@ function Landing() {
       
          {coins.map((coin)=>
             coin.name.toUpperCase().match(search.toUpperCase()) &&
-                <p key={coin.id}> <img src={coin.image} width={60} alt="f"/>{coin.name}</p> 
+                <Coins key={coin.id} data={coin}/>
             )
        }</div> :
 
-       <h1>loading...</h1>
+       <h1><img src={loading} alt="load"/></h1>
     
 
     }
